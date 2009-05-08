@@ -1,0 +1,139 @@
+<!-- Coral Reef General -->
+
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>pl.graniec</groupId>
+    <artifactId>cr</artifactId>
+    <packaging>pom</packaging>
+    <version>1</version>
+    
+    <name>Coral Reef</name>
+    <url>http://graniec.pl/</url>
+
+    <modules>
+        <!-- Coral Reef Libraries -->
+        <module>cr-chat</module>
+        <module>cr-geometry</module>
+        <module>cr-light2d</module>
+        <module>cr-network</module>
+        <module>cr-network-stream</module>
+        <module>cr-pulpcore-desktop</module>
+        
+        <!-- Demos -->
+        <module>cr-light2d-demo</module>
+        <module>cr-network-demo</module>
+        <module>cr-pulpcore-desktop-demo</module>
+        
+        <!-- 3rd Imported -->
+        <module>pulpcore</module>
+    </modules>
+    
+    <repositories>
+    
+        <!-- Coral Reef Official Maven Repository -->
+        <repository>
+            <id>atom</id>
+            <name>Coral Reef Official Repository</name>
+            <layout>default</layout>
+            <url>http://atom.bounceme.net:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        
+        <!-- Coral Reef 3rd Party -->
+        <repository>
+            <id>atom-3rd</id>
+            <name>Coral Reef 3rd Party</name>
+            <layout>default</layout>
+            <url>http://atom.bounceme.net:8081/nexus/content/repositories/thirdparty/</url>
+        </repository>
+        
+    </repositories>
+
+    <build>
+        <plugins>
+        
+            <!-- Source including -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Javadoc creation -->            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+        </plugins>
+    </build>
+    
+    <profiles>
+        <!-- Debug profile -->
+        <profile>
+            <id>debug</id>
+            <activation>
+                <property>
+                    <name>!release</name>
+                </property>
+            </activation>
+            
+            <properties>
+                <coralreef.build>debug</coralreef.build>
+            </properties>
+        </profile>
+    
+        <!-- Release profile -->
+        <profile>
+            <id>release</id>
+            
+            <activation>
+                <property>
+                    <name>release</name>
+                </property>
+            </activation>
+            
+            <properties>
+                <coralreef.build>release</coralreef.build>
+            </properties>
+            
+        </profile>
+        
+    </profiles>
+    
+    <distributionManagement>
+        <repository>
+            <id>atom</id>
+            <name>Atom Repository</name>
+            <url>http://atom:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        
+        <snapshotRepository>
+            <id>atom</id>
+            <name>Atom Repository</name>
+            <url>http://atom:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
+</project>
+
