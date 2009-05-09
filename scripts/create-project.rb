@@ -79,6 +79,17 @@ mkdir "#{name}/src/test/resources"
 
 exec "cd #{name}; git init"
 
+# add to project-list file
+notice "Adding project entry to project-list file"
+project_list_file = File.new("project-list", "a")
+project_list_file.write("\n#{name}")
+project_list_file.close()
+
+notice "Adding project entry to parent .gitignore file"
+project_list_file = File.new(".gitignore", "a")
+project_list_file.write("\n#{name}")
+project_list_file.close()
+
 puts
 create_public_repo = prompt("Project created. Do you also want to create a public GIT repository? [yes/no]", /^(yes)|(no)$/)
 
