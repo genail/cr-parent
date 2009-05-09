@@ -13,3 +13,24 @@ prepare_config();
 
 require 'scripts/config'
 
+project_list_file = File.new("project-list")
+projects = project_list_file.read().split("\n")
+project_list_file.close()
+
+projects.push(".")
+
+clean = true
+
+projects.each do |project|
+    #notice "checking project #{project}"
+    result = `cd #{project}; git status`
+    
+    if (result.find("nothing to commit") != nil)
+        notice "#{project} has uncommited changes"
+        clean = false
+    end
+end
+
+if (clean)
+    notice "All repositories are clean :-)"
+end
