@@ -18,12 +18,6 @@
     <name>[[long_name]]</name>
     <url>http://graniec.pl/</url>
     
-    <scm>
-        <connection>scm:svn:svn://atom/general/CoralReef/trunk/[[name]]</connection>
-        <developerConnection>scm:svn:svn://atom/general/CoralReef/trunk/[[name]]</developerConnection>
-        <url>svn://atom/general/CoralReef/trunk/[[name]]</url>
-    </scm>
-
     <dependencies>
     
         <!-- JUnit -->
