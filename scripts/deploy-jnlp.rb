@@ -31,7 +31,11 @@ end
 require_app "mvn"
 require_file "#{project_dir}/webstart-goals"
 
-mkdir "#{CONFIG::JNLP_OUTPUT_DIR}/#{project_dir}"
+if (not File.exists? "#{CONFIG::JNLP_OUTPUT_DIR}/#{project_dir}")
+    mkdir "#{CONFIG::JNLP_OUTPUT_DIR}/#{project_dir}"
+else
+    exec "rm -f #{CONFIG::JNLP_OUTPUT_DIR}/#{project_dir}/*"
+end
 
 # read the goals
 goals_file = File.new("#{project_dir}/webstart-goals")
