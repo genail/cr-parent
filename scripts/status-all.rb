@@ -25,7 +25,7 @@ projects.each do |project|
     #notice "checking project #{project}"
     result = `cd #{project}; git status`
     
-    if (result.find("nothing to commit") != nil)
+    if (result.index("nothing to commit") == nil)
         notice "#{project} has uncommited changes"
         clean = false
     end
