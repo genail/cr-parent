@@ -1,0 +1,6 @@
+module CONFIG
+
+PUBLIC_REPO_DIR = "~/mnt/atom/git"
+PUBLIC_REPO_URL = "http://git.graniec.pl"
+
+end
