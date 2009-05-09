@@ -18,18 +18,6 @@ require_app "git"
 projects = contents("project-list")
 projects.push(".")
 
-clean = true
-
 projects.each do |project|
-    #notice "checking project #{project}"
-    result = `cd #{project}; git status`
-    
-    if (result.index("nothing to commit") == nil)
-        notice "#{project} has uncommited changes"
-        clean = false
-    end
-end
-
-if (clean)
-    notice "All repositories are clean :-)"
+    exec "cd #{project}; git push"
 end

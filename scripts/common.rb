@@ -24,6 +24,14 @@ def cp_template(from, to, replace = nil)
     to_file.close()    
 end
 
+def contents(filename)
+    file = File.new(filename)
+    c = file.read().split("\n")
+    file.close()
+    
+    return c
+end
+
 def error(message)
     puts "Error:"
     puts "\t#{message}"
