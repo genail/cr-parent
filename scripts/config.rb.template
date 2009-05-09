@@ -1,6 +1,10 @@
 module CONFIG
 
-PUBLIC_REPO_DIR = "~/mnt/atom/git"
+
+
+PUBLIC_REPO_DIR = "/home/chudy/mnt/atom/git"
 PUBLIC_REPO_URL = "http://git.graniec.pl"
+
+JNLP_OUTPUT_DIR = "/home/chudy/mnt/atom/jnlp"
 
 end
