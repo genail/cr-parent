@@ -22,6 +22,11 @@ clean = true
 
 projects.each do |project|
     #notice "checking project #{project}"
+
+    if (project.empty?)
+        next
+    end
+
     result = `cd #{project}; git status`
     
     if (result.index("nothing to commit") == nil)
