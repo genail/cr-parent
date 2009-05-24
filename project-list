@@ -8,5 +8,5 @@ cr-network-stream
 cr-pulpcore-desktop
 cr-pulpcore-desktop-demo
 pulpcore
-
 cr-demo
+cr-network-service

@@ -21,6 +21,7 @@
         <module>cr-geometry</module>
         <module>cr-light2d</module>
         <module>cr-network</module>
+        <module>cr-network-service</module>
         <module>cr-network-stream</module>
         <module>cr-pulpcore-desktop</module>
         
