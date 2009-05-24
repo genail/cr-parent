@@ -25,6 +25,7 @@
         <module>cr-pulpcore-desktop</module>
         
         <!-- Demos -->
+        <module>cr-demo</module>
         <module>cr-light2d-demo</module>
         <module>cr-network-demo</module>
         <module>cr-pulpcore-desktop-demo</module>
