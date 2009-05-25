@@ -12,6 +12,5 @@ cr-pulpcore-desktop
 pulpcore
 target
 ProfileProject
-
 cr-demo
 cr-network-service

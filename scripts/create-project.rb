@@ -77,7 +77,7 @@ mkdir "#{name}/src/test"
 mkdir "#{name}/src/test/java"
 mkdir "#{name}/src/test/resources"
 
-exec "cd #{name}; git init"
+exec "cd #{name}; git init; git add .; git commit -m \"Initial import\""
 
 # add to project-list file
 notice "Adding project entry to project-list file"
