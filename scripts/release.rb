@@ -101,8 +101,8 @@ exec "cd #{PROJECT_DIR}; git tag #{u_tag_name}"
 notice "Deploying to Maven repository"
 
 if (not exec "cd #{PROJECT_DIR}; mvn deploy")
-    error "Error during deploying. Undoing commit..."
-    exec "cd #{PROJECT_DIR}; git reset --soft HEAD^"
+    notice "Error during deploying. Undoing commit..."
+    exec "cd #{PROJECT_DIR}; git reset --soft \"HEAD^\""
     exit 1
 end
 

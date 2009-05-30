@@ -1,5 +1,8 @@
 require 'ftools'
 
+def clean?(project)
+    return `cd #{project}; git status`.index("nothing to commit") != nil
+end
 
 def cp(from, to)
     notice("copying file from '#{from}' to '#{to}'");
@@ -25,11 +28,15 @@ def cp_template(from, to, replace = nil)
 end
 
 def contents(filename)
+    return contents_str().split("\n")
+end
+
+def contents_str(filename)
     file = File.new(filename)
-    c = file.read().split("\n")
-    file.close()
-    
-    return c
+    c = file.read();
+    file.close();
+
+    return c;
 end
 
 def error(message)
@@ -40,7 +47,7 @@ end
 
 def exec(command)
     puts "# exec: #{command}"
-    system(command)
+    return system(command)
 end
 
 def notice(message)
@@ -62,7 +69,7 @@ end
 
 def prompt(question, answer_regex, default_answer=nil)
     print "#{question}: "
-    answer = gets.chop()
+    answer = STDIN.gets.chop()
     
     if (answer.empty? and default_answer != nil)
         answer = default_answer
