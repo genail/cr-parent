@@ -28,7 +28,7 @@ def cp_template(from, to, replace = nil)
 end
 
 def contents(filename)
-    return contents_str().split("\n")
+    return contents_str(filename).split("\n")
 end
 
 def contents_str(filename)
