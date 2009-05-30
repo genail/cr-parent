@@ -22,6 +22,6 @@ projects.each do |project|
     if (project.empty?)
         next
     end
-
-    exec "cd #{project}; git push"
+    
+    exec "cd #{project}; git pull"
 end
