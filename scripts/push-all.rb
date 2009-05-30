@@ -24,4 +24,5 @@ projects.each do |project|
     end
 
     exec "cd #{project}; git push"
+    exec "cd #{project}; git push --tags"
 end
