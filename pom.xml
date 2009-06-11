@@ -20,6 +20,7 @@
         <module>cr-chat</module>
         <module>cr-geometry</module>
         <module>cr-light2d</module>
+        <module>cr-light2d-pulpcore</module>
         <module>cr-network</module>
         <module>cr-network-service</module>
         <module>cr-network-stream</module>
