@@ -17,6 +17,8 @@
 
     <modules>
         <!-- Coral Reef Libraries -->
+        <module>cr-atlantis</module>
+        <module>cr-atlantis-opengl</module>
         <module>cr-chat</module>
         <module>cr-geometry</module>
         <module>cr-light2d</module>
