@@ -45,7 +45,7 @@
             <id>atom</id>
             <name>Coral Reef Official Repository</name>
             <layout>default</layout>
-            <url>http://atom.bounceme.net:8081/nexus/content/repositories/releases/</url>
+            <url>http://graniec.pl:8081/nexus/content/repositories/releases/</url>
         </repository>
         
         <!-- Coral Reef 3rd Party -->
@@ -53,7 +53,7 @@
             <id>atom-3rd</id>
             <name>Coral Reef 3rd Party</name>
             <layout>default</layout>
-            <url>http://atom.bounceme.net:8081/nexus/content/repositories/thirdparty/</url>
+            <url>http://graniec.pl:8081/nexus/content/repositories/thirdparty/</url>
         </repository>
         
     </repositories>
