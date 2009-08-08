@@ -3,7 +3,7 @@ module CONFIG
 
 
 PUBLIC_REPO_DIR = "/home/chudy/mnt/atom/git"
-PUBLIC_REPO_URL = "git://github.com/genail/"
+PUBLIC_REPO_URL = "git://github.com/genail"
 
 JNLP_OUTPUT_DIR = "/home/chudy/mnt/atom/jnlp"
 
