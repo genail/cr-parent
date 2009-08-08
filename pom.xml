@@ -55,6 +55,12 @@
             <layout>default</layout>
             <url>http://graniec.pl:8081/nexus/content/repositories/thirdparty/</url>
         </repository>
+
+        <repository>
+            <id>java.net</id>
+            <layout>default</layout>
+            <url>http://download.java.net/maven/2/</url>
+        </repository>
         
     </repositories>
 
