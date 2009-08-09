@@ -55,6 +55,7 @@
             <url>http://graniec.pl:8081/nexus/content/repositories/thirdparty/</url>
         </repository>
 
+        <!-- Java.net Repository -->
         <repository>
             <id>java.net</id>
             <layout>default</layout>
